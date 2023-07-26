@@ -1,0 +1,10 @@
+name: 'Prevasio Container Security'
+description: 'Extensible security plugin platform that checks Dockers for potential vulnerabilities before any commits to a repository.'
+author: 'Algosec'
+branding:
+  icon: 'activity'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'docker://public.ecr.aws/algosec/connectivity-risk-analysis:1.0.22'
+  entrypoint: 'iac-risk-analysis'
