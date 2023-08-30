@@ -1,6 +1,6 @@
 ## Prevasio CI/CD Container Security
 
-AlgoSec’s CI/CD Container Security solution is an extensible security plugin platform that ... #TODO
+AlgoSec’s CI/CD Container Security solution is an extensible security plugin platform that ... # TODO
 
 ### Action parameters
 |Parameter|Description|Required|Default|Type|
@@ -20,18 +20,16 @@ AlgoSec’s CI/CD Container Security solution is an extensible security plugin p
 |`framework`(const)|Specify the scanned framework|Yes|docker|string|
 
 
-### Configuration and usage
-Here is an example of all possible parameters passed as environment variables to the action. 
-Take into consideration that GitHub and AlgoSec credentials are mandatory in order to run this action, along with the general parameters.
-
-#### Configuration:
+#### Configuration
 Create a new client id and client secret in your Algosec Prevasio account using our user management module.
 Add AlgoSec credentials to your github repo's secrets.
-Add the general parameters to the action as env vars. 
-The values for MIN_LEVEL_TO_BLOCK_PR are: 
-1. Critical: 
+Note:
+* GitHub and AlgoSec credentials are mandatory in order to run the action.
+* If the `WORKING_DIR`, `DOCKERFILE_NAME` and `MIN_LEVEL_TO_BLOCK_PR` parameters, are not provided, the default values are taken.
+* The severty levels for the `MIN_LEVEL_TO_BLOCK_PR` are - Critical: 0, High: 1, Medium: 2. If it set to -1, the PR won't be blocked.
+* The `product` and the `framework` parameters must be included and should not be changed.
 
-
+### Example usage
 ```yaml
 name: 'Your Repo CI/CD Yaml Workflow'
 on:
@@ -39,29 +37,32 @@ on:
     branches:
       - 'main'
 jobs:
-  algosec-iac-connectivity-risk-analysis:
-     name: 'Algosec IAC Connectivity Risk Analysis'
+  algosec-prevasio-cicd-container-security:
+     name: 'Algosec Prevasio CI/CD Container Security'
      runs-on: ubuntu-latest
      steps:
         - name: Checkout
           uses: actions/checkout@v3
-        - name: Connectivity Risk Analysis
+        - name: CI/CD Container Security
           uses: algosec/connectivity-risk-analysis-action@v1.0.0
           env:
             # Github's Private Access Token
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
-            # CloudFlow credentials
+            # AlgoSec credentials
             CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
             CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
             CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
             
-            # Add your provider's keys to environment variables 
-            # as secrets or use an external action to preconfigure
+            # General parameters
+            WORKING_DIR: .
+            DOCKERFILE_NAME: Dockerfile
+            MIN_LEVEL_TO_BLOCK_PR: 1
+            product: Prevasio
+            framework: docker
             
 ```
 
 
 ### Output(screenshots)
-<img width="500" src="https://cloudflow.algosec.com/cloudflow/assets/devsecops-action/screenshot2.png" />
-<img height="500" src="https://cloudflow.algosec.com/cloudflow/assets/devsecops-action/screenshot1.png" />
+# TODO
