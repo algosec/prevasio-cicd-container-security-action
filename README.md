@@ -17,7 +17,7 @@ AlgoSec’s CI/CD Container Security solution is an extensible security plugin p
 |`DOCKERFILE_NAME`|Specify the dockerfile name|Yes|Dockerfile|string|
 |`MIN_LEVEL_TO_BLOCK_PR`|Specify the minimum risk severity level to block the PR if at least one risk of this level is found|Yes|-1 (never block)|int|
 |`product` (const)|Specify the AlgoSec's product which being used|Yes|Prevasio|string|
-|`framework`(const)|Specify the scanned framework|Yes|docker|string|
+|`framework` (const)|Specify the scanned framework|Yes|docker|string|
 
 
 #### Configuration
@@ -28,6 +28,7 @@ Note:
 * If the `WORKING_DIR`, `DOCKERFILE_NAME` and `MIN_LEVEL_TO_BLOCK_PR` parameters, are not provided, the default values are taken.
 * The severty levels for the `MIN_LEVEL_TO_BLOCK_PR` are - Critical: 0, High: 1, Medium: 2. If it set to -1, the PR won't be blocked.
 * The `product` and the `framework` parameters must be included and should not be changed.
+* The branch is also configurable. You can change the name of the branch under [on -> pull_request -> branches]
 
 ### Example usage
 ```yaml
