@@ -19,8 +19,8 @@ AlgoSec’s CI/CD Container Security solution is an extensible security plugin p
 |`product` (const)|Specify the AlgoSec's product which being used|Yes|Prevasio|string|
 |`framework` (const)|Specify the scanned framework|Yes|docker|string|
 
-
-#### Configuration
+---
+### Configurations
 Create a new client id and client secret in your Algosec Prevasio account using our user management module.
 Add AlgoSec credentials to your github repo's secrets.
 Note:
@@ -39,6 +39,7 @@ In order to enable the action to block the PR, follow the next steps:
 * Add `Algosec Prevasio CI/CD Container Security` as a required check
 * Create the rule
 
+---
 ### Example usage
 ```yaml
 name: 'Your Repo CI/CD Yaml Workflow'
