@@ -1,6 +1,6 @@
 ## Prevasio CI/CD Container Security
 
-AlgoSec’s CI/CD Container Security solution is an extensible security plugin platform that ... # TODO
+AlgoSec’s Prevasio CI/CD Container Security solution is an extensible security plugin platform that provides an automated scan for Dockerfiles, each time a new pull request (PR) is created to the predefined branch in the repository.
 
 ### Action parameters
 |Parameter|Description|Required|Default|Type|
