@@ -31,6 +31,12 @@ Note:
 * The branch is also configurable. You can change the name of the branch under [on -> pull_request -> branches]
 
 In order to enable the action to block the PR, follow the next steps:
+1. For the action to be definable as a required check, it should be manually run:
+* Go to the repository `Actions` tab
+* Choose the workflow that runs `algosec-prevasio-cicd-container-security` job
+* Run the workflow
+
+2. Create new branch protection rule to define the action as a required check:
 * Go to the repository `Settings` tab
 * Click on `Branches` on the left sidebar
 * Click `Add rule` / `Add branch protection rule`
