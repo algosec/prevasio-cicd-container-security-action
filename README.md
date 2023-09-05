@@ -13,9 +13,9 @@ AlgoSec’s Prevasio CI/CD Container Security solution is an extensible security
 |`CF_CLIENT_SECRET`|AlgoSec Client Secret|Yes| |Secret Parameter|
 ||||||
 |<b>General Parameters</b>| | | | |
-|`WORKING_DIR`|Specify the GitHub repository's folder that contains the Dockerfile|Yes|. (root folder)|string|
-|`DOCKERFILE_NAME`|Specify the dockerfile name|Yes|Dockerfile|string|
-|`MIN_LEVEL_TO_BLOCK_PR`|Specify the minimum risk severity level to block the PR if at least one risk of this level is found|Yes|-1 (never block)|int|
+|`WORKING_DIR`|Specify the GitHub repository's folder that contains the Dockerfile|No|. (root folder)|string|
+|`DOCKERFILE_NAME`|Specify the dockerfile name|No|Dockerfile|string|
+|`MIN_LEVEL_TO_BLOCK_PR`|Specify the minimum risk severity level to block the PR if at least one risk of this level is found|No|-1 (never block)|int|
 |`product` (const)|Specify the AlgoSec's product which being used|Yes|Prevasio|string|
 |`framework` (const)|Specify the scanned framework|Yes|docker|string|
 
