@@ -77,3 +77,7 @@ jobs:
             MIN_LEVEL_TO_BLOCK_PR: 1
             
 ```
+
+Output(screenshots)
+<img height="500" src="https://cloudflow.algosec.com/cloudflow/assets/devsecops-action/prevasio-scan-blocked.png" />
+<img width="500" src="https://cloudflow.algosec.com/cloudflow/assets/devsecops-action/prevasio-scan-passed.png" />
