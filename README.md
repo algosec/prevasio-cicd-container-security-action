@@ -1,6 +1,7 @@
 ## Prevasio CI/CD Container Security
 
-AlgoSec’s Prevasio CI/CD Container Security solution is an extensible security plugin platform that provides an automated scan for Dockerfiles, each time a new pull request (PR) is created to the predefined branch in the repository.
+AlgoSec-Prevasio CI/CD Container Security solution is an extensible security plugin platform that provides an automated scan for Docker Containers.
+AlgoSec-Prevasio will build and scan the image as part of the user GitHub repo CI process.
 
 ### Action parameters
 |Parameter|Description|Required|Default|Type|
@@ -16,8 +17,6 @@ AlgoSec’s Prevasio CI/CD Container Security solution is an extensible security
 |`WORKING_DIR`|Specify the GitHub repository's folder that contains the Dockerfile|No|. (root folder)|string|
 |`DOCKERFILE_NAME`|Specify the dockerfile name|No|Dockerfile|string|
 |`MIN_LEVEL_TO_BLOCK_PR`|Specify the minimum risk severity level to block the PR if at least one risk of this level is found|No|-1 (never block)|int|
-|`product` (const)|Specify the AlgoSec's product which being used|Yes|Prevasio|string|
-|`framework` (const)|Specify the scanned framework|Yes|docker|string|
 
 ---  
 ### Configurations
@@ -53,6 +52,7 @@ on:
   pull_request:
     branches:
       - 'main'
+  workflow_dispatch:
 jobs:
   algosec-prevasio-cicd-container-security:
      name: 'Algosec Prevasio CI/CD Container Security'
@@ -75,7 +75,5 @@ jobs:
             WORKING_DIR: .
             DOCKERFILE_NAME: Dockerfile
             MIN_LEVEL_TO_BLOCK_PR: 1
-            product: Prevasio
-            framework: docker
             
 ```
