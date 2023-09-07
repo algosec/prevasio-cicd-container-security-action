@@ -8,3 +8,6 @@ runs:
   using: 'docker'
   image: 'docker://public.ecr.aws/algosec/connectivity-risk-analysis:1.0.22'
   entrypoint: 'prevasio-cicd-container-security'
+  env:
+    PRODUCT: prevasio
+    FRAMEWORK: docker
