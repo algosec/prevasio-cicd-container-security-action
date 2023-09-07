@@ -79,5 +79,6 @@ jobs:
 ```
 
 Output(screenshots)
+
 <img height="500" src="https://cloudflow.algosec.com/cloudflow/assets/devsecops-action/prevasio-scan-blocked.png" />
 <img width="500" src="https://cloudflow.algosec.com/cloudflow/assets/devsecops-action/prevasio-scan-passed.png" />
