@@ -1,7 +1,9 @@
 ## Prevasio CI/CD Container Security
 
 AlgoSec-Prevasio CI/CD Container Security solution is an extensible security plugin platform that provides an automated scan for Docker Containers.
-AlgoSec-Prevasio will build and scan the image as part of the user GitHub repo CI process.
+AlgoSec-Prevasio will build and scan the image as part of the user GitHub repo CI process.  
+The action is available only to registered AlgoSec Prevasio CNAPP users. For the official trial, click [here](https://www.algosec.com/products/algosec-cloud/).
+
 
 ### Action parameters
 |Parameter|Description|Required|Default|Type|
@@ -20,7 +22,7 @@ AlgoSec-Prevasio will build and scan the image as part of the user GitHub repo C
 
 ---  
 ### Configurations
-Create a new client id and client secret in your Algosec Prevasio account using our user management module.
+Create client id and client secret in your Algosec Prevasio account using our user management module.
 Add AlgoSec credentials to your github repo's secrets.
 Note:
 * GitHub and AlgoSec credentials are mandatory in order to run the action.
