@@ -4,7 +4,7 @@ AlgoSec-Prevasio CI/CD Container Security solution is an extensible security plu
 AlgoSec-Prevasio will build and scan the image as part of the user GitHub repo CI process.  
 The action is available only to registered AlgoSec Prevasio CNAPP users. For the official trial, click [here](https://www.algosec.com/products/algosec-cloud/).
 
-
+---
 ### Action parameters
 |Parameter|Description|Required|Default|Type|
 |---|---|---|---|---|
