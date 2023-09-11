@@ -57,7 +57,7 @@ on:
   workflow_dispatch:
 jobs:
   algosec-prevasio-cicd-container-security:
-     name: 'Algosec Prevasio CI/CD Container Security'
+     name: Algosec Prevasio CI/CD Container Security
      runs-on: ubuntu-latest
      permissions:
         contents: read
