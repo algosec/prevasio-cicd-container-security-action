@@ -17,7 +17,7 @@ The action is available only to registered AlgoSec Prevasio CNAPP users. For the
 ||||||
 |<b>General Parameters</b>| | | | |
 |`WORKING_DIR`|Specify the GitHub repository's folder that contains the Dockerfile|No|. (root folder)|string|
-|`DOCKERFILE_NAME`|Specify the dockerfile name|No|Dockerfile|string|
+|`DOCKERFILE_NAME`|Specify the Dockerfile name|No|Dockerfile|string|
 |`MIN_LEVEL_TO_BLOCK_PR`|Specify the minimum risk severity level to block the PR if at least one risk of this level is found|No|-1 (never block)|int|
 
 ---  
