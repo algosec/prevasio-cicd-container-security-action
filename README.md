@@ -65,16 +65,16 @@ jobs:
      steps:
         - name: Checkout
           uses: actions/checkout@v3
-        - name: CI/CD Container Security
+        - name: Algosec Prevasio CI/CD Container Security
           uses: algosec/prevasio-cicd-container-security-action@v1.0.0
           env:
             # Github's Private Access Token
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
             # AlgoSec credentials
-            CF_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
-            CF_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
-            CF_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
+            ALGOSEC_TENANT_ID: ${{ secrets.CF_TENANT_ID }}
+            ALGOSEC_CLIENT_ID: ${{ secrets.CF_CLIENT_ID }}
+            ALGOSEC_CLIENT_SECRET: ${{ secrets.CF_CLIENT_SECRET }}
             
             # General parameters
             WORKING_DIR: .
