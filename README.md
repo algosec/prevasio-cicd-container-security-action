@@ -1,7 +1,7 @@
 ## Prevasio CI/CD Container Security
 
 AlgoSec-Prevasio CI/CD Container Security solution is an extensible security plugin platform that provides an automated scan for Docker Containers.
-AlgoSec-Prevasio will build and scan the image as part of the user GitHub repo CI process.  
+AlgoSec-Prevasio will build, simulate runtime, and scan the image statically and dynamically for security risks as part of the user GitHub repo CI process.
 The action is available only to registered AlgoSec Prevasio CNAPP users. For the official trial, click [here](https://www.algosec.com/products/algosec-cloud/).
 
 ---
@@ -10,7 +10,7 @@ The action is available only to registered AlgoSec Prevasio CNAPP users. For the
 |---|---|---|---|---|
 ||||||
 |<b>Repository secrets</b>| | | | |
-|`GITHUB_TOKEN`|Github PaT for checking diffs and commenting|Yes| |Secret Parameter|
+|`GITHUB_TOKEN`|Github PAT for checking diffs and commenting|Yes| |Secret Parameter|
 |`CF_TENANT_ID`|AlgoSec Tenant ID|Yes| |Secret Parameter|
 |`CF_CLIENT_ID`|AlgoSec Client ID|Yes| |Secret Parameter|
 |`CF_CLIENT_SECRET`|AlgoSec Client Secret|Yes| |Secret Parameter|
@@ -25,26 +25,25 @@ The action is available only to registered AlgoSec Prevasio CNAPP users. For the
 Create client id and client secret in your Algosec Prevasio account using our user management module.
 Add AlgoSec credentials to your github repo's secrets.
 Note:
-* GitHub and AlgoSec credentials are mandatory in order to run the action.
-* If the `WORKING_DIR`, `DOCKERFILE_NAME` and `MIN_LEVEL_TO_BLOCK_PR` parameters, are not provided, the default values are taken.
-* The severty levels for the `MIN_LEVEL_TO_BLOCK_PR` are - Critical: 0, High: 1, Medium: 2. If it set to -1, the PR won't be blocked.
-* The `product` and the `framework` parameters must be included and should not be changed.
+* GitHub and AlgoSec credentials are mandatory in order to run the action
+* If the `WORKING_DIR`, `DOCKERFILE_NAME` and `MIN_LEVEL_TO_BLOCK_PR` parameters, are not provided, the default values are taken
+* The severty levels for the `MIN_LEVEL_TO_BLOCK_PR` are - Critical: 0, High: 1, Medium: 2. If it set to -1, the PR won't be blocked
 * The branch is also configurable. You can change the name of the branch under [on -> pull_request -> branches]  
 
 **In order to enable the action to block the PR, follow the next steps:**    
 <u>For the action to be definable as a required check, it should be manually run:</u>
-* Go to the repository `Actions` tab
-* Choose the workflow that runs `algosec-prevasio-cicd-container-security` job
-* Run the workflow  
+1. Go to the repository **Actions** tab
+2. Choose the workflow that runs **algosec-prevasio-cicd-container-security** job
+3. Run the workflow  
 
-<u>Create new branch protection rule to define the action as a required check:</u>
-* Go to the repository `Settings` tab
-* Click on `Branches` on the left sidebar
-* Click `Add rule` / `Add branch protection rule`
-* Specify the branch the action runs on
-* Enable `Require status checks to pass before merging`
-* Add `Algosec Prevasio CI/CD Container Security` as a required check
-* Create the rule  
+<u>Create a new branch protection rule to define the action as a required check:</u>
+1. Go to the repository **Settings** tab
+2. Click on **Branches** on the left sidebar
+3. Click **Add rule** / **Add branch protection rule**
+4. Specify the branch the action runs on
+5. Enable **Require status checks to pass before merging**
+6. Add **Algosec Prevasio CI/CD Container Security** as a required check
+7. Create the rule  
 
 ---
 ### Example usage
@@ -78,8 +77,9 @@ jobs:
             DOCKERFILE_NAME: Dockerfile
             MIN_LEVEL_TO_BLOCK_PR: 1
             
-```
+```  
 
+---
 Output(screenshots)
 
 <img height="500" src="https://cloudflow.algosec.com/cloudflow/assets/devsecops-action/prevasio-scan-blocked.png" />
