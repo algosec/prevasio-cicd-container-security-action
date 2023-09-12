@@ -1,7 +1,7 @@
 ## Prevasio CI/CD Container Security
 
-AlgoSec-Prevasio CI/CD Container Security solution is an extensible security plugin platform that provides an automated scan for Docker Containers.
-AlgoSec-Prevasio will build, simulate runtime, and scan the image statically and dynamically for security risks as part of the user GitHub repo CI process.
+AlgoSec Prevasio CI/CD Container Security solution is an extensible security plugin platform that provides an automated scan for Docker containers.
+AlgoSec Prevasio will build, simulate runtime, and scan the image statically and dynamically for security risks. This is integrated into the user's GitHub repository CI process.
 The action is available only to registered AlgoSec Prevasio CNAPP users. For the official trial, click [here](https://www.algosec.com/products/algosec-cloud/).
 
 ---
@@ -22,17 +22,17 @@ The action is available only to registered AlgoSec Prevasio CNAPP users. For the
 
 ---  
 ### Configurations
-Create client id and client secret in your Algosec Prevasio account using our user management module.
-Add AlgoSec credentials to your github repo's secrets.
+Create Client ID and Client Secret in your Algosec Prevasio account using our user management module.  
+Add AlgoSec credentials to your GitHub repo's secrets.  
 Note:
 * GitHub and AlgoSec credentials are mandatory in order to run the action
 * If the `WORKING_DIR`, `DOCKERFILE_NAME` and `MIN_LEVEL_TO_BLOCK_PR` parameters, are not provided, the default values are taken
-* The severty levels for the `MIN_LEVEL_TO_BLOCK_PR` are - Critical: 0, High: 1, Medium: 2. If it set to -1, the PR won't be blocked
-* The branch is also configurable. You can change the name of the branch under [on -> pull_request -> branches]
+* The severity levels for the `MIN_LEVEL_TO_BLOCK_PR` are - Critical: 0, High: 1, Medium: 2. If it is set to -1, the PR won't be blocked
+* The branch name is also configurable. You can change the name of the branch under [on -> pull_request -> branches]
 * The permissions assigned to the job are mandatory in order to enable it to read the repository content and to write the scan results as a comment in the PR
 
-**In order to enable the action to block the PR, follow the next steps:**    
-For the action to be definable as a required check, it should be manually run:
+**To enable the action to block the PR, follow these steps:**  
+For the action to be defined as a required check, it must be run manually:
 1. Go to the repository **Actions** tab
 2. Choose the workflow that runs **algosec-prevasio-cicd-container-security** job
 3. Run the workflow  
