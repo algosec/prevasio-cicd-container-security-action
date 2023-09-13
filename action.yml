@@ -6,7 +6,7 @@ branding:
   color: 'blue'
 runs:
   using: 'docker'
-  image: 'docker://public.ecr.aws/algosec/connectivity-risk-analysis:1.0.22'
+  image: 'docker://public.ecr.aws/algosec/connectivity-risk-analysis:1.0.23'
   entrypoint: 'prevasio-cicd-container-security'
   env:
     PRODUCT: prevasio
