@@ -16,6 +16,7 @@ The action is available only to registered AlgoSec Prevasio CNAPP users. For the
 |`ALGOSEC_CLIENT_SECRET`|AlgoSec Client Secret|Yes| |Secret Parameter|
 ||||||
 |<b>General Parameters</b>| | | | |
+|`CF_REGION`|Algosec deployment region us/anz/eu|No|us |string|
 |`WORKING_DIR`|Specify the GitHub repository's folder that contains the Dockerfile|No|. (root folder)|string|
 |`DOCKERFILE_NAME`|Specify the Dockerfile name|No|Dockerfile|string|
 |`MIN_LEVEL_TO_BLOCK_PR`|Specify the minimum risk severity level to block the PR if at least one risk of this level is found|No|-1 (never block)|int|
