@@ -67,7 +67,7 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3
         - name: Algosec Prevasio CI/CD Container Security
-          uses: algosec/prevasio-cicd-container-security-action@v1.0.8
+          uses: algosec/prevasio-cicd-container-security-action@v1.0.9
           env:
             # Github's Private Access Token
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
